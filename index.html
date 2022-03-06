@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -14,7 +13,6 @@
 
     <title>Frontend Mentor | Crowdfunding product page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -26,24 +24,121 @@
     </style>
   </head>
   <body>
-    About Discover Get Started Mastercraft Bamboo Monitor Riser A beautiful &
-    handcrafted monitor stand to reduce neck and eye strain. Back this project
-    Bookmark $89,914 of $100,000 backed 5,007 total backers 56 days left About
-    this project The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
-    platform that elevates your screen to a more comfortable viewing height.
-    Placing your monitor at eye level has the potential to improve your posture
-    and make you more comfortable while at work, helping you stay focused on the
-    task at hand. Featuring artisan craftsmanship, the simplicity of design
-    creates extra desk space below your computer to allow notepads, pens, and
-    USB sticks to be stored under the stand. Bamboo Stand Pledge $25 or more You
-    get an ergonomic stand made of natural bamboo. You've helped us launch our
-    promotional campaign, and you’ll be added to a special Backer member list.
-    101 left Select Reward Black Edition Stand Pledge $75 or more You get a
-    Black Special Edition computer stand and a personal thank you. You’ll be
-    added to our Backer member list. Shipping is included. 64 left Select Reward
-    Mahogany Special Edition Pledge $200 or more You get two Special Edition
-    Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-    to our Backer member list. Shipping is included. 0 left Out of Stock
+    <div class="main-container">
+      <div class="out-container">
+        <!-- Top Navigation -->
+        <nav>About Discover Get Started</nav>
+
+        <!-- Main content -->
+        <div class="in-container">
+          <header class="header">
+            <h1 class="header-title">Mastercraft Bamboo Monitor Riser</h1>
+            <p class="header-text">
+              A beautiful & handcrafted monitor stand to reduce neck and eye
+              strain.
+            </p>
+            <div class="header-buttons">
+              <a href="" class="bnt btn-primary">Back this project</a>
+              <a href="" class="bnt btn-rounded" id="bookmark">Bookmark</a>
+            </div>
+          </header>
+
+          <section class="info" id="infobar">
+            <div class="info-cells">
+              <div class="info-cell">
+                <p class="lead">$89,914</p>
+                <p class="text">of $100,000 backed</p>
+              </div>
+              <div class="info-cell">
+                <p class="lead">5,007</p>
+                <p class="text">total backers</p>
+              </div>
+              <div class="info-cell">
+                <p class="lead">56</p>
+                <p class="text">days left</p>
+              </div>
+            </div>
+            <div class="info-progressbar"></div>
+          </section>
+
+          <section id="project">
+            <article class="article">
+              <h2 class="article-title">About this project</h2>
+              <p class="article-text">
+                The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+                platform that elevates your screen to a more comfortable viewing
+                height. Placing your monitor at eye level has the potential to
+                improve your posture and make you more comfortable while at
+                work, helping you stay focused on the task at hand.
+              </p>
+              <p class="article-text">
+                Featuring artisan craftsmanship, the simplicity of design
+                creates extra desk space below your computer to allow notepads,
+                pens, and USB sticks to be stored under the stand.
+              </p>
+            </article>
+
+            <div class="cards-container">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Bamboo Stand</h3>
+                  <p>Pledge $25 or more</p>
+                </div>
+                <p class="card-text">
+                  You get an ergonomic stand made of natural bamboo. You've
+                  helped us launch our promotional campaign, and you’ll be added
+                  to a special Backer member list.
+                </p>
+                <div class="card-footer">
+                  <p><strong>101</strong><small>left</small></p>
+                  <a href="" class="btn btn-primary">Select Reward</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Black Edition Stand</h3>
+                  <p>Pledge $75 or more</p>
+                </div>
+                <p class="card-text">
+                  You get a Black Special Edition computer stand and a personal
+                  thank you. You’ll be added to our Backer member list. Shipping
+                  is included.
+                </p>
+                <div class="card-footer">
+                  <p><strong>64</strong><small>left</small></p>
+                  <a href="" class="btn btn-primary">Select Reward</a>
+                </div>
+              </div>
+              <div class="card disabled">
+                <div class="card-header">
+                  <h3>Mahogany Special Edition</h3>
+                  <p>Pledge $200 or more</p>
+                </div>
+                <p class="card-text">
+                  You get two Special Edition Mahogany stands, a Backer T-Shirt,
+                  and a personal thank you. You’ll be added to our Backer member
+                  list. Shipping is included.
+                </p>
+                <div class="card-footer">
+                  <p><strong>0</strong><small>left</small></p>
+                  <a href="" class="btn btn-primary">Out of Stock</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-container">
+        <button class="btn-close"></button>
+        <h2 class="motal-title"></h2>
+        <p class="modal-text"></p>
+
+        <div class="modal-cards"></div>
+      </div>
+    </div>
 
     <!-- Selection modal start -->
 
