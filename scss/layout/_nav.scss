@@ -1,3 +1,80 @@
 .nav {
+  position: relative;
   padding-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-logo,
+  &-toggler {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-toggler {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    & > :first-child {
+      display: block;
+    }
+    & > :last-child {
+      display: none;
+    }
+  }
+
+  &-list {
+    display: none;
+
+    position: absolute;
+    margin: 0 25px;
+    padding: 0;
+    width: calc(100% - 50px);
+    top: 90px;
+    left: 0;
+
+    border-radius: 10px;
+
+    list-style: none;
+    background-color: white;
+  }
+
+  &-item {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $Black;
+    line-height: 1.1;
+    border-bottom: 1px solid mix($Black, white, 10%);
+  }
+}
+
+.nav--expanded {
+  &.nav {
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  .nav-list {
+    display: block;
+  }
+
+  .nav-toggler {
+    & > :first-child {
+      display: none;
+    }
+    & > :last-child {
+      display: block;
+    }
+  }
 }

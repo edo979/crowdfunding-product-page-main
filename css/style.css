@@ -114,7 +114,67 @@ body {
 }
 
 .nav {
+  position: relative;
   padding-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo, .nav-toggler {
+  position: relative;
+  z-index: 2;
+}
+.nav-toggler {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggler > :first-child {
+  display: block;
+}
+.nav-toggler > :last-child {
+  display: none;
+}
+.nav-list {
+  display: none;
+  position: absolute;
+  margin: 0 25px;
+  padding: 0;
+  width: calc(100% - 50px);
+  top: 90px;
+  left: 0;
+  border-radius: 10px;
+  list-style: none;
+  background-color: white;
+}
+.nav-item {
+  display: block;
+  padding: 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
+  line-height: 1.1;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.nav--expanded.nav::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.nav--expanded .nav-list {
+  display: block;
+}
+.nav--expanded .nav-toggler > :first-child {
+  display: none;
+}
+.nav--expanded .nav-toggler > :last-child {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
