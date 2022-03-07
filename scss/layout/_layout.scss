@@ -1,10 +1,39 @@
 // Layout
-.section {
-  padding: 45px 25px 40px;
+.modal,
+.modal-success {
+  display: none;
+}
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+.main-container {
+  outline: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+.container {
+  padding: 0 25px;
+  min-width: 325px;
+  max-width: 600px;
+  outline: 1px blue solid;
+}
+
+.container--flex {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .top-bg-img {
   height: 300px;
+  width: 100%;
+  max-width: 1440px;
   background-image: url(../../images/image-hero-mobile.jpg);
   background-position: center;
   background-size: cover;
