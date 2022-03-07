@@ -88,24 +88,20 @@ body {
 }
 
 .main-container {
-  outline: 1px red solid;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100vw;
   max-width: 1440px;
 }
 
 .container {
+  margin: 0 auto;
   padding: 0 25px;
-  min-width: 325px;
   max-width: 600px;
-  outline: 1px blue solid;
+  min-width: 325px;
+  width: 100%;
 }
 
 .container--flex {
   max-width: 1000px;
-  margin: 0 auto;
 }
 
 .top-bg-img {
