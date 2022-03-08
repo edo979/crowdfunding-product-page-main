@@ -133,6 +133,20 @@ body {
   background-size: cover;
 }
 
+.btn {
+  display: inline-block;
+  padding: 15px 45px;
+  border-radius: 40px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #3cb4ac;
+}
+
 .nav {
   position: relative;
   padding-top: 35px;
