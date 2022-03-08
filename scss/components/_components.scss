@@ -4,14 +4,34 @@
 
 .btn {
   display: inline-block;
-  padding: 15px 45px;
+  padding: 20px 45px;
   border-radius: 40px;
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.8;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: $Moderate-cyan;
+
+  &:hover {
+    background-color: $Dark-cyan;
+  }
+}
+
+.btn-secondary {
+  background-color: $Dark-gray;
+}
+
+.btn-rounded {
+  height: 55px;
+  width: 55px;
+  padding: 0;
+  background-image: url(../../images/icon-bookmark.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
