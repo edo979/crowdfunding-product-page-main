@@ -1,0 +1,25 @@
+.header {
+  position: relative;
+  margin-top: -55px;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    background-image: url(../../images/logo-mastercraft.svg);
+    background-size: cover;
+  }
+
+  &__title {
+    padding-top: 55px;
+  }
+
+  &__text {
+    margin: 25px 0;
+  }
+}
