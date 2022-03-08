@@ -7,12 +7,11 @@
 }
 
 body {
-  display: grid;
-  place-content: center;
   background-color: $light-gray;
 }
 
 .main-container {
+  margin: 0 auto;
   width: 100vw;
   max-width: $max-width;
 }

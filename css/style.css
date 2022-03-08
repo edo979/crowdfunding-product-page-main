@@ -83,12 +83,11 @@ body {
 }
 
 body {
-  display: grid;
-  place-content: center;
   background-color: #e6e6e6;
 }
 
 .main-container {
+  margin: 0 auto;
   width: 100vw;
   max-width: 1440px;
 }
