@@ -92,12 +92,14 @@ h1,
 
 h2,
 .h2 {
-  font-size: 1.2;
+  margin: 20px 0 20px;
+  font-size: 1.2rem;
   line-height: 1.2;
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 0.91rem;
+  line-height: 1.6;
   color: #7a7a7a;
 }
 
@@ -189,7 +191,7 @@ body {
 
 .nav {
   position: relative;
-  padding-top: 35px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -254,6 +256,7 @@ body {
 .header {
   position: relative;
   margin-top: -55px;
+  padding-bottom: 40px;
   text-align: center;
 }
 .header::before {
@@ -276,7 +279,7 @@ body {
   padding: 30px 10px 0;
 }
 .header__text {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .info {
@@ -322,6 +325,10 @@ body {
 .progress-bar {
   width: 89.9%;
   background-color: #3cb4ac;
+}
+
+.article__text {
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

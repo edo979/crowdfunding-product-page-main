@@ -1,6 +1,7 @@
 .header {
   position: relative;
   margin-top: -55px;
+  padding-bottom: 40px;
   text-align: center;
 
   &::before {
@@ -26,6 +27,6 @@
   }
 
   &__text {
-    margin: 25px 0;
+    margin: 20px 0;
   }
 }

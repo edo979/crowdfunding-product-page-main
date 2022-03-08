@@ -51,3 +51,9 @@ body {
 @import 'nav';
 @import 'header';
 @import 'info-section';
+
+.article {
+  &__text {
+    margin-bottom: 30px;
+  }
+}
