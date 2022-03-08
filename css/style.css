@@ -80,7 +80,9 @@ body {
 h1,
 .h1,
 h2,
-.h2 {
+.h2,
+h3,
+.h3 {
   color: black;
 }
 
@@ -95,6 +97,13 @@ h2,
   margin: 20px 0 20px;
   font-size: 1.2rem;
   line-height: 1.2;
+}
+
+h3,
+.h3 {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 p {
@@ -329,6 +338,45 @@ body {
 
 .article__text {
   margin-bottom: 30px;
+}
+.article p + p {
+  margin-bottom: 40px;
+}
+
+.card {
+  margin: 25px 0;
+  padding: 25px;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+}
+.card__header {
+  margin-bottom: 25px;
+}
+.card__header p {
+  color: #3cb4ac;
+  font-weight: 500;
+}
+.card__footer p {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card--disabled {
+  border-color: #dfdfdf;
+}
+.card--disabled h3,
+.card--disabled .big-text {
+  color: gray;
+}
+.card--disabled .card__header p {
+  color: #a7ddda;
+}
+.card--disabled p {
+  color: #bfbfbf;
+}
+.card--disabled .btn {
+  background-color: #bfbfbf;
 }
 
 /*# sourceMappingURL=style.css.map */

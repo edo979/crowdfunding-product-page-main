@@ -56,4 +56,10 @@ body {
   &__text {
     margin-bottom: 30px;
   }
+
+  p + p {
+    margin-bottom: 40px;
+  }
 }
+
+@import '../components/card';

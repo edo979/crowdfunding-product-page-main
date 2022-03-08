@@ -1,0 +1,50 @@
+@use '../abstracts/misc' as *;
+
+.card {
+  margin: 25px 0;
+  padding: 25px;
+  border: 1px solid $light-gray-200;
+  border-radius: 10px;
+
+  &__header {
+    margin-bottom: 25px;
+
+    p {
+      color: $Moderate-cyan;
+      font-weight: 500;
+    }
+  }
+
+  &__footer {
+    p {
+      margin: 20px 0;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &--disabled {
+    border-color: mix($light-gray-200, white, 50%);
+
+    h3,
+    .big-text {
+      color: $black-500;
+    }
+
+    .card__header {
+      p {
+        color: $Moderate-cyan-200;
+      }
+    }
+
+    p {
+      color: $light-gray-200;
+    }
+
+    .btn {
+      background-color: $light-gray-200;
+    }
+  }
+}

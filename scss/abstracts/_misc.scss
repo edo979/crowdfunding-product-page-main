@@ -3,11 +3,13 @@
 // ### Primary
 
 $Moderate-cyan: hsl(176, 50%, 47%);
+$Moderate-cyan-200: mix($Moderate-cyan, white, 45%);
 $Dark-cyan: hsl(176, 72%, 28%);
 
 // ### Neutral
 
 $Black: hsl(0, 0%, 0%);
+$black-500: hsl(0, 0%, 50%);
 $Dark-gray: hsl(0, 0%, 48%);
 $light-gray-100: hsl(0, 0, 95%);
 $light-gray-200: hsl(0, 0, 75%);
