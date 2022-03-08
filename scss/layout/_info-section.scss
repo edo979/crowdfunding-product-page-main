@@ -18,13 +18,37 @@
       height: 1px;
       width: 80px;
       transform: translateX(-50%);
-      background-color: $Dark-gray;
+      background-color: $light-gray-200;
     }
 
     &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
       &::after {
         display: none;
       }
     }
+  }
+
+  &__progressbar {
+    margin: 35px 0 15px;
+  }
+}
+
+.progress {
+  width: 100%;
+  background-color: $light-gray-100;
+  overflow: hidden;
+
+  &,
+  &-bar {
+    height: 12px;
+    border-radius: 10px;
+  }
+
+  &-bar {
+    width: 89.9%;
+    background-color: $Moderate-cyan;
   }
 }
