@@ -9,6 +9,7 @@
 body {
   display: grid;
   place-content: center;
+  background-color: $light-gray;
 }
 
 .main-container {
@@ -16,16 +17,24 @@ body {
   max-width: $max-width;
 }
 
-.container {
+.inner-container,
+.flex-container {
   margin: 0 auto;
-  padding: 0 25px;
-  max-width: $container-max-width;
-  min-width: $min-width;
-  width: 100%;
 }
 
-.container--flex {
+.inner-container {
+  max-width: $inner-max-width;
+  min-width: $min-width;
+}
+
+.container {
+  margin: 0 25px;
+  background-color: white;
+}
+
+.flex-container {
   max-width: $container-flex-max-width;
+  padding: 25px;
 }
 
 .top-bg-img {

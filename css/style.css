@@ -85,6 +85,7 @@ body {
 body {
   display: grid;
   place-content: center;
+  background-color: #e6e6e6;
 }
 
 .main-container {
@@ -92,16 +93,24 @@ body {
   max-width: 1440px;
 }
 
-.container {
+.inner-container,
+.flex-container {
   margin: 0 auto;
-  padding: 0 25px;
-  max-width: 600px;
-  min-width: 325px;
-  width: 100%;
 }
 
-.container--flex {
+.inner-container {
+  max-width: 600px;
+  min-width: 325px;
+}
+
+.container {
+  margin: 0 25px;
+  background-color: white;
+}
+
+.flex-container {
   max-width: 1000px;
+  padding: 25px;
 }
 
 .top-bg-img {
