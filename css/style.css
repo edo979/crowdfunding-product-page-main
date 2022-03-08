@@ -78,14 +78,34 @@ body {
 }
 
 h1,
+.h1,
+h2,
+.h2 {
+  color: black;
+}
+
+h1,
 .h1 {
-  line-height: 1.2;
   font-size: 1.275rem;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: 1.2;
+  line-height: 1.2;
 }
 
 p {
   font-size: 0.9rem;
   color: #7a7a7a;
+}
+
+.big-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: black;
 }
 
 .modal,
@@ -257,6 +277,30 @@ body {
 }
 .header__text {
   margin: 25px 0;
+}
+
+.info {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.info__cell {
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+.info__cell::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  width: 80px;
+  transform: translateX(-50%);
+  background-color: #7a7a7a;
+}
+.info__cell:last-child::after {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

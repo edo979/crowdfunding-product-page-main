@@ -8,12 +8,32 @@ body {
 }
 
 h1,
+.h1,
+h2,
+.h2 {
+  color: black;
+}
+
+h1,
 .h1 {
-  line-height: 1.2;
   font-size: 1.275rem;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: 1.2;
+  line-height: 1.2;
 }
 
 p {
   font-size: 0.9rem;
   color: $Dark-gray;
+}
+
+.big-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: black;
 }
