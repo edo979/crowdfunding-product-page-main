@@ -1,6 +1,19 @@
 // Typography
+@use '../abstracts/misc' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
 
 body {
   font-family: 'Commissioner', sans-serif;
+}
+
+h1,
+.h1 {
+  line-height: 1.2;
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+  color: $Dark-gray;
 }

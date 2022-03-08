@@ -77,6 +77,17 @@ body {
   font-family: "Commissioner", sans-serif;
 }
 
+h1,
+.h1 {
+  line-height: 1.2;
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #7a7a7a;
+}
+
 .modal,
 .modal-success {
   display: none;
@@ -104,6 +115,7 @@ body {
 
 .container {
   margin: 0 25px;
+  border-radius: 10px;
   background-color: white;
 }
 
@@ -183,6 +195,29 @@ body {
 }
 .nav--expanded .nav-toggler > :last-child {
   display: block;
+}
+
+.header {
+  position: relative;
+  margin-top: -55px;
+  text-align: center;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  background-image: url(../../images/logo-mastercraft.svg);
+  background-size: cover;
+}
+.header__title {
+  padding-top: 55px;
+}
+.header__text {
+  margin: 25px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
