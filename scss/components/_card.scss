@@ -1,17 +1,5 @@
 .card {
-  margin: 25px 0;
-  padding: 25px;
-  border: 1px solid $light-gray-200;
-  border-radius: 10px;
-
-  &__header {
-    margin-bottom: 25px;
-
-    p {
-      color: $Moderate-cyan;
-      font-weight: 500;
-    }
-  }
+  @include card;
 
   &__footer {
     p {
