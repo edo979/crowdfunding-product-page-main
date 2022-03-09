@@ -119,6 +119,16 @@ p {
   color: black;
 }
 
+@media (min-width: 600px) {
+  h1,
+.h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
 .modal,
 .modal-success {
   display: none;
@@ -290,7 +300,8 @@ body {
     margin-left: 30px;
     padding: 0;
     border: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 300;
     color: white;
   }
 }
@@ -323,6 +334,39 @@ body {
   margin: 20px 0;
 }
 
+@media (min-width: 600px) {
+  .header {
+    margin-top: -90px;
+  }
+  .header__buttons {
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  .header__buttons a + a {
+    position: relative;
+    margin-right: 115px;
+  }
+  .header__buttons a + a::after {
+    content: "Bookmark";
+    position: absolute;
+    right: -115px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 25px;
+    padding-left: 50px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    color: #7a7a7a;
+    z-index: -1;
+  }
+  .header__title {
+    padding: 10px 10px 0;
+  }
+  .header__text {
+    margin-bottom: 40px;
+  }
+}
 .info {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -412,6 +456,10 @@ body {
 }
 
 @media (min-width: 600px) {
+  .container {
+    padding: 50px;
+  }
+
   .top-bg-img {
     height: 400px;
     background-image: url(../../images/image-hero-desktop.jpg);

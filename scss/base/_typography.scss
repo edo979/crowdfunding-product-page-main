@@ -48,3 +48,14 @@ p {
   font-weight: 700;
   color: black;
 }
+
+@include mq {
+  h1,
+  .h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

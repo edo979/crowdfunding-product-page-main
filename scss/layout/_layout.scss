@@ -65,6 +65,10 @@ body {
 @import '../components/card';
 
 @include mq {
+  .container {
+    padding: 50px;
+  }
+
   .top-bg-img {
     height: 400px;
     background-image: url(../../images/image-hero-desktop.jpg);
