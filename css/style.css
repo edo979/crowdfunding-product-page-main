@@ -140,7 +140,7 @@ body {
 }
 
 .inner-container {
-  max-width: 730px;
+  max-width: 780px;
   min-width: 325px;
 }
 
@@ -409,6 +409,13 @@ body {
 }
 .card--disabled .btn {
   background-color: #bfbfbf;
+}
+
+@media (min-width: 600px) {
+  .top-bg-img {
+    height: 400px;
+    background-image: url(../../images/image-hero-desktop.jpg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

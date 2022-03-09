@@ -63,3 +63,10 @@ body {
 }
 
 @import '../components/card';
+
+@include mq {
+  .top-bg-img {
+    height: 400px;
+    background-image: url(../../images/image-hero-desktop.jpg);
+  }
+}
