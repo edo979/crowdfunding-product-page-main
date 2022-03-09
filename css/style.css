@@ -129,6 +129,39 @@ p {
     font-size: 1rem;
   }
 }
+.btn {
+  display: inline-block;
+  padding: 20px 45px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.8;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3cb4ac;
+}
+.btn-primary:hover {
+  background-color: #147b74;
+}
+
+.btn-secondary {
+  background-color: #7a7a7a;
+}
+
+.btn-rounded {
+  height: 55px;
+  width: 55px;
+  padding: 0;
+  background-image: url(../../images/icon-bookmark.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .modal,
 .modal-success {
   display: none;
@@ -173,39 +206,6 @@ body {
   background-image: url(../../images/image-hero-mobile.jpg);
   background-position: center;
   background-size: cover;
-}
-
-.btn {
-  display: inline-block;
-  padding: 20px 45px;
-  border-radius: 40px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 0.8;
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #3cb4ac;
-}
-.btn-primary:hover {
-  background-color: #147b74;
-}
-
-.btn-secondary {
-  background-color: #7a7a7a;
-}
-
-.btn-rounded {
-  height: 55px;
-  width: 55px;
-  padding: 0;
-  background-image: url(../../images/icon-bookmark.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .nav {
@@ -412,6 +412,33 @@ body {
   background-color: #3cb4ac;
 }
 
+@media (min-width: 600px) {
+  .info__cells {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+  }
+  .info__cell {
+    flex: 1 1 33.3%;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #dedede;
+  }
+  .info__cell::after {
+    display: none;
+  }
+  .info__cell:last-child {
+    border: none;
+  }
+  .info__price {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .progress {
+    margin: 40px 0 0;
+  }
+}
 .article__text {
   margin-bottom: 30px;
 }

@@ -1,5 +1,3 @@
-@use '../abstracts/misc' as *;
-
 // Components
 
 .btn {
@@ -34,4 +32,50 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.modal,
+.modal-success {
+  display: none;
+}
+
+body {
+  background-color: $light-gray-100;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: $max-width;
+}
+
+.inner-container,
+.flex-container {
+  margin: 0 auto;
+}
+
+.inner-container {
+  max-width: $inner-max-width;
+  min-width: $min-width;
+}
+
+.container {
+  margin: 0 25px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.flex-container {
+  max-width: $container-flex-max-width;
+  padding: 25px;
+}
+
+.top-bg-img {
+  height: 300px;
+  width: 100%;
+  max-width: $max-width;
+  background-image: url(../../images/image-hero-mobile.jpg);
+  background-position: center;
+  background-size: cover;
 }
