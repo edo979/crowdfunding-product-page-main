@@ -17,5 +17,13 @@ $light-gray-200: hsl(0, 0, 75%);
 // Layout
 $max-width: 1440px;
 $min-width: 325px;
-$inner-max-width: 600px;
-$container-flex-max-width: 1000px;
+$inner-max-width: 730px;
+$container-flex-max-width: 1160px;
+
+$break-point: 600px;
+
+@mixin mq {
+  @media (min-width: $break-point) {
+    @content;
+  }
+}

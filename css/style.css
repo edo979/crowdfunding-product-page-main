@@ -140,7 +140,7 @@ body {
 }
 
 .inner-container {
-  max-width: 600px;
+  max-width: 730px;
   min-width: 325px;
 }
 
@@ -152,7 +152,7 @@ body {
 }
 
 .flex-container {
-  max-width: 1000px;
+  max-width: 1160px;
   padding: 25px;
 }
 
@@ -262,6 +262,38 @@ body {
   display: block;
 }
 
+@media (min-width: 600px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    flex: 1;
+  }
+  .nav-logo img {
+    width: 130px;
+  }
+  .nav-toggler {
+    display: none;
+  }
+  .nav-list {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  .nav-item {
+    margin-left: 30px;
+    padding: 0;
+    border: none;
+    font-size: 0.9rem;
+    color: white;
+  }
+}
 .header {
   position: relative;
   margin-top: -55px;
