@@ -28,7 +28,7 @@
 
     h3,
     .big-text {
-      color: $black-500;
+      color: $light-gray-200;
     }
 
     .card__header {
@@ -42,7 +42,40 @@
     }
 
     .btn {
-      background-color: $light-gray-200;
+      background-color: $light-gray-150;
+    }
+  }
+}
+
+@include mq {
+  .card {
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      p {
+        margin: 0;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        font-size: 0.85rem;
+        line-height: 1.2;
+        font-weight: 500;
+      }
+    }
+
+    &:last-of-type {
+      margin: 0;
     }
   }
 }

@@ -55,7 +55,21 @@ p {
     font-size: 1.8rem;
   }
 
+  h2,
+  .h2 {
+    margin: 0 0 50px;
+    line-height: 1;
+    font-size: 1.275rem;
+  }
+
+  h3,
+  .h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
   p {
     font-size: 1rem;
+    line-height: 2;
   }
 }
