@@ -15,6 +15,7 @@
   &-container {
     position: relative;
     padding: $container-padding;
+    max-width: 900px;
 
     background-color: white;
   }
@@ -27,10 +28,75 @@
 
   &-card {
     @include card;
+
+    &__radio-button {
+      display: inline-block;
+
+      input {
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin-bottom: 4px;
+      }
+    }
+
+    &__header {
+      display: inline-block;
+    }
+
+    &__stock {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__footer {
+      display: none;
+    }
   }
 }
 
 .modal,
 .modal-success {
   display: auto;
+}
+
+@include mq {
+  .modal {
+    &-card {
+      &__body {
+        display: grid;
+        grid-template:
+          'left center right'
+          '. text text'
+          /
+          auto 1fr auto;
+      }
+
+      &__radio-button {
+        grid-area: left;
+      }
+
+      &__header {
+        grid-area: center;
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+      }
+
+      &__text {
+        grid-area: text;
+      }
+
+      &__stock {
+        grid-area: right;
+        align-self: start;
+        justify-self: end;
+
+        .big-text {
+          line-height: 1;
+        }
+      }
+    }
+  }
 }

@@ -531,6 +531,7 @@ body {
 .modal-container {
   position: relative;
   padding: 25px;
+  max-width: 900px;
   background-color: white;
 }
 .modal .btn-close {
@@ -551,12 +552,58 @@ body {
   color: #3cb4ac;
   font-weight: 500;
 }
+.modal-card__radio-button {
+  display: inline-block;
+}
+.modal-card__radio-button input {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 4px;
+}
+.modal-card__header {
+  display: inline-block;
+}
+.modal-card__stock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal-card__footer {
+  display: none;
+}
 
 .modal,
 .modal-success {
   display: auto;
 }
 
+@media (min-width: 600px) {
+  .modal-card__body {
+    display: grid;
+    grid-template: "left center right" ". text text"/auto 1fr auto;
+  }
+  .modal-card__radio-button {
+    grid-area: left;
+  }
+  .modal-card__header {
+    grid-area: center;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .modal-card__text {
+    grid-area: text;
+  }
+  .modal-card__stock {
+    grid-area: right;
+    align-self: start;
+    justify-self: end;
+  }
+  .modal-card__stock .big-text {
+    line-height: 1;
+  }
+}
 @media (min-width: 600px) {
   .container {
     padding: 50px;
