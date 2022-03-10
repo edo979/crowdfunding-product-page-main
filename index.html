@@ -159,7 +159,7 @@
         <div class="modal-card" id="no-reward">
           <div class="modal-card__body">
             <div class="modal-card__radio-button">
-              <input type="radio" name="pledge" id="pledge" />
+              <input type="radio" name="pledge" id="pledge" value="false" />
             </div>
             <div class="modal-card__header">
               <h3 class="modal-card__title">Pledge with no reward</h3>
@@ -175,7 +175,13 @@
         <div class="modal-card modal-card--active">
           <div class="modal-card__body">
             <div class="modal-card__radio-button">
-              <input type="radio" name="pledge" id="bamboo" />
+              <input
+                type="radio"
+                name="pledge"
+                id="bamboo"
+                value="true"
+                checked
+              />
             </div>
             <div class="modal-card__header">
               <h3 class="modal-card__title">Bamboo Stand</h3>
@@ -196,7 +202,13 @@
                 >Enter your pledge</label
               >
               <div class="footer-form__value">
-                <input type="number" id="pledge" value="25" placeholder="25" />
+                <input
+                  type="number"
+                  id="pledge"
+                  value="25"
+                  placeholder="25"
+                  checked="false"
+                />
               </div>
               <button class="btn btn-primary footer-form__button">
                 Continue
@@ -208,7 +220,7 @@
         <div class="modal-card">
           <div class="modal-card__body">
             <div class="modal-card__radio-button">
-              <input type="radio" name="pledge" id="black" />
+              <input type="radio" name="pledge" id="black" value="false" />
             </div>
             <div class="modal-card__header">
               <h3 class="modal-card__title">Black Edition Stand</h3>
@@ -287,7 +299,7 @@
           Monitor Riser worldwide. You will get an email once our campaign is
           completed.
         </p>
-        <button class="btn btn-success">Got it!</button>
+        <button class="btn btn-success" id="finish-btn">Got it!</button>
       </div>
     </div>
     <script src="script.js"></script>
