@@ -2,16 +2,16 @@ $container-padding: 25px;
 
 .modal,
 .modal-success {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   min-height: 100vh;
-  display: grid;
   place-content: center;
 
   background-color: rgba($color: black, $alpha: 0.7);
-  z-index: 4;
+  z-index: 3;
 
   &-container {
     position: relative;
@@ -161,11 +161,6 @@ $container-padding: 25px;
     margin-bottom: 40px;
     text-align: center;
   }
-}
-
-.modal,
-.modal-success {
-  display: none;
 }
 
 @include mq {
