@@ -106,7 +106,8 @@ h3,
   line-height: 1;
 }
 
-p {
+p,
+label {
   font-size: 0.91rem;
   line-height: 1.6;
   color: #7a7a7a;
@@ -274,8 +275,8 @@ body {
 }
 .footer-form__button {
   border: none;
-  padding: 17px 20px;
-  line-height: 1;
+  padding: 15px 25px;
+  line-height: 1.4;
   font-family: "Commissioner", sans-serif;
 }
 
@@ -623,6 +624,7 @@ body {
   padding: 25px;
   border: 1px solid #bfbfbf;
   border-radius: 10px;
+  padding: 0;
 }
 .modal-card__header {
   margin-bottom: 25px;
@@ -646,6 +648,9 @@ body {
 }
 .modal-card--disabled .btn {
   background-color: #dedede;
+}
+.modal-card__body {
+  padding: 25px;
 }
 .modal-card__radio-button {
   display: inline-block;
@@ -706,18 +711,22 @@ body {
   border-top: 1px solid #dedede;
 }
 .modal-card .footer-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 25px 30px;
+  text-align: center;
 }
 .modal-card .footer-form__label {
   color: #7a7a7a;
   font-weight: 500;
+  display: block;
+  margin-bottom: 20px;
 }
 .modal-card .footer-form__value {
-  margin-left: auto;
-  margin-right: 20px;
+  display: inline-block;
+}
+.modal-card .footer-form__button {
+  margin-left: 15px;
+  display: inline-block;
+  font-size: 0.85rem;
 }
 .modal .big-text {
   font-size: 1.15rem;
@@ -792,6 +801,16 @@ body {
   }
   .modal-card__stock .big-text {
     line-height: 1;
+  }
+
+  .footer-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-form__value {
+    margin-left: auto;
+    margin-right: 20px;
   }
 
   .modal-success-container {
