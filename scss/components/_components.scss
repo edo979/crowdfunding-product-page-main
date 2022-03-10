@@ -3,6 +3,7 @@
 .btn {
   display: inline-block;
   padding: 20px 45px;
+  border: none;
   border-radius: 40px;
   font-size: 1rem;
   font-weight: 700;
@@ -12,7 +13,8 @@
   cursor: pointer;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-success {
   background-color: $Moderate-cyan;
 
   &:hover {
@@ -32,6 +34,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.btn-success {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 15px 30px;
 }
 
 body {
