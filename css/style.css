@@ -733,12 +733,9 @@ body {
   text-align: center;
 }
 
-.modal {
-  display: none;
-}
-
+.modal,
 .modal-success {
-  display: auto;
+  display: none;
 }
 
 @media (min-width: 600px) {

@@ -163,11 +163,9 @@ $container-padding: 25px;
   }
 }
 
-.modal {
-  display: none;
-}
+.modal,
 .modal-success {
-  display: auto;
+  display: none;
 }
 
 @include mq {
