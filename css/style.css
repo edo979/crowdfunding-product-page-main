@@ -570,7 +570,8 @@ body {
     margin: 0;
   }
 }
-.modal {
+.modal,
+.modal-success {
   position: absolute;
   top: 0;
   left: 0;
@@ -581,7 +582,8 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 4;
 }
-.modal-container {
+.modal-container,
+.modal-success-container {
   position: relative;
   padding: 25px;
   max-width: 730px;
@@ -590,6 +592,7 @@ body {
   border-radius: 10px;
   background-color: white;
 }
+
 .modal .btn-close {
   position: absolute;
   right: 25px;
@@ -706,7 +709,23 @@ body {
   font-size: 1.15rem;
 }
 
-.modal,
+.modal-success-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-success__title {
+  margin: 25px 0 25px;
+}
+.modal-success__text {
+  text-align: center;
+}
+
+.modal {
+  display: none;
+}
+
 .modal-success {
   display: auto;
 }
