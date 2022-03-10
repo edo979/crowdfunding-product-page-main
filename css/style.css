@@ -468,12 +468,6 @@ body {
   color: #3cb4ac;
   font-weight: 500;
 }
-.card__footer p {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 .card--disabled {
   border-color: #dfdfdf;
 }
@@ -489,6 +483,12 @@ body {
 }
 .card--disabled .btn {
   background-color: #dedede;
+}
+.card__footer p {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 @media (min-width: 600px) {
@@ -532,12 +532,18 @@ body {
   position: relative;
   padding: 25px;
   max-width: 900px;
+  min-width: 320px;
+  margin: 25px;
+  border-radius: 10px;
   background-color: white;
 }
 .modal .btn-close {
   position: absolute;
   right: 25px;
   top: 25px;
+}
+.modal__title {
+  margin: 0 0 35px;
 }
 .modal-card {
   margin: 25px 0;
@@ -552,6 +558,22 @@ body {
   color: #3cb4ac;
   font-weight: 500;
 }
+.modal-card--disabled {
+  border-color: #dfdfdf;
+}
+.modal-card--disabled h3,
+.modal-card--disabled .big-text {
+  color: #bfbfbf;
+}
+.modal-card--disabled .card__header p {
+  color: #a7ddda;
+}
+.modal-card--disabled p {
+  color: #bfbfbf;
+}
+.modal-card--disabled .btn {
+  background-color: #dedede;
+}
 .modal-card__radio-button {
   display: inline-block;
 }
@@ -560,9 +582,23 @@ body {
   width: 25px;
   height: 25px;
   margin-bottom: 4px;
+  border: 1px solid red;
+}
+.modal-card#no-reward .modal-card__header {
+  position: relative;
+  width: 80%;
+}
+.modal-card#no-reward .modal-card__title {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .modal-card__header {
   display: inline-block;
+  margin-left: 5px;
+}
+.modal-card__text {
+  margin: 5px 0 20px;
 }
 .modal-card__stock {
   display: flex;
@@ -571,6 +607,12 @@ body {
 }
 .modal-card__footer {
   display: none;
+}
+.modal-card--disabled .modal-card__label {
+  color: #a7ddda;
+}
+.modal .big-text {
+  font-size: 1.15rem;
 }
 
 .modal,
@@ -582,6 +624,16 @@ body {
   .modal-card__body {
     display: grid;
     grid-template: "left center right" ". text text"/auto 1fr auto;
+  }
+  .modal-card#no-reward .modal-card__header {
+    margin-top: 5px;
+    position: relative;
+    width: auto;
+  }
+  .modal-card#no-reward .modal-card__title {
+    position: relative;
+    top: auto;
+    left: auto;
   }
   .modal-card__radio-button {
     grid-area: left;

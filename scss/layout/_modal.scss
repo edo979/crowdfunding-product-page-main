@@ -16,6 +16,9 @@
     position: relative;
     padding: $container-padding;
     max-width: 900px;
+    min-width: 320px;
+    margin: 25px;
+    border-radius: 10px;
 
     background-color: white;
   }
@@ -24,6 +27,10 @@
     position: absolute;
     right: $container-padding;
     top: $container-padding;
+  }
+
+  &__title {
+    margin: 0 0 35px;
   }
 
   &-card {
@@ -37,11 +44,29 @@
         width: 25px;
         height: 25px;
         margin-bottom: 4px;
+        border: 1px solid red;
+      }
+    }
+
+    &#no-reward & {
+      &__header {
+        position: relative;
+        width: 80%;
+      }
+      &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
 
     &__header {
       display: inline-block;
+      margin-left: 5px;
+    }
+
+    &__text {
+      margin: 5px 0 20px;
     }
 
     &__stock {
@@ -53,6 +78,16 @@
     &__footer {
       display: none;
     }
+
+    &--disabled & {
+      &__label {
+        color: $Moderate-cyan-200;
+      }
+    }
+  }
+
+  .big-text {
+    font-size: 1.15rem;
   }
 }
 
@@ -71,6 +106,19 @@
           '. text text'
           /
           auto 1fr auto;
+      }
+
+      &#no-reward & {
+        &__header {
+          margin-top: 5px;
+          position: relative;
+          width: auto;
+        }
+        &__title {
+          position: relative;
+          top: auto;
+          left: auto;
+        }
       }
 
       &__radio-button {

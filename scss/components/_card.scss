@@ -10,29 +10,6 @@
       gap: 10px;
     }
   }
-
-  &--disabled {
-    border-color: mix($light-gray-200, white, 50%);
-
-    h3,
-    .big-text {
-      color: $light-gray-200;
-    }
-
-    .card__header {
-      p {
-        color: $Moderate-cyan-200;
-      }
-    }
-
-    p {
-      color: $light-gray-200;
-    }
-
-    .btn {
-      background-color: $light-gray-150;
-    }
-  }
 }
 
 @include mq {
