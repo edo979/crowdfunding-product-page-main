@@ -169,7 +169,7 @@
             </p>
           </div>
         </div>
-        <div class="modal-card">
+        <div class="modal-card modal-card--active">
           <div class="modal-card__body">
             <div class="modal-card__radio-button">
               <input type="radio" name="pledge" id="bamboo" />
@@ -192,12 +192,9 @@
               <label class="footer-form__label" for="pledge"
                 >Enter your pledge</label
               >
-              <input
-                class="footer-form__value"
-                type="number"
-                id="pledge"
-                placeholder="$25"
-              />
+              <div class="footer-form__value">
+                <input type="number" id="pledge" value="25" placeholder="$25" />
+              </div>
               <button class="btn btn-primary footer-form__button">
                 Continue
               </button>

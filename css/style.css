@@ -602,6 +602,17 @@ body {
   width: 22px;
   height: 22px;
   margin-bottom: 4px;
+  appearance: none;
+  border: 1px solid #bfbfbf;
+  border-radius: 50%;
+}
+.modal-card__radio-button input:active {
+  outline: 1px solid #7a7a7a;
+}
+.modal-card__radio-button input:checked {
+  border: 5px solid white;
+  outline: 1px solid #bfbfbf;
+  background-color: #3cb4ac;
 }
 .modal-card#no-reward .modal-card__header {
   position: relative;
@@ -630,6 +641,27 @@ body {
 .modal-card--disabled .modal-card__label {
   color: #a7ddda;
 }
+.modal-card--active {
+  border: 2px solid;
+  border-color: #3cb4ac;
+}
+.modal-card--active .modal-card__label, .modal-card--active .modal-card__title {
+  font-weight: 700;
+}
+.modal-card--active .modal-card__footer {
+  display: block;
+  border-top: 1px solid #dedede;
+}
+.modal-card .footer-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 30px;
+}
+.modal-card .footer-form__value {
+  margin-left: auto;
+  width: 100px;
+}
 .modal .big-text {
   font-size: 1.15rem;
 }
@@ -651,12 +683,13 @@ body {
     margin-bottom: 35px;
   }
   .modal-card {
-    padding: 30px;
+    padding: 0px;
   }
   .modal-card__body {
     display: grid;
     grid-template: "left center right" ". text text"/auto 1fr auto;
     gap: 20px;
+    padding: 30px;
   }
   .modal-card#no-reward .modal-card__header {
     position: relative;
@@ -673,7 +706,6 @@ body {
   }
   .modal-card__radio-button input {
     margin: 0;
-    border: 0;
   }
   .modal-card__header {
     grid-area: center;

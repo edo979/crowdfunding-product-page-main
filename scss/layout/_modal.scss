@@ -47,6 +47,20 @@
         width: 22px;
         height: 22px;
         margin-bottom: 4px;
+
+        appearance: none;
+        border: 1px solid $light-gray-200;
+        border-radius: 50%;
+
+        &:active {
+          outline: 1px solid $Dark-gray;
+        }
+
+        &:checked {
+          border: 5px solid white;
+          outline: 1px solid $light-gray-200;
+          background-color: $Moderate-cyan;
+        }
       }
     }
 
@@ -86,6 +100,35 @@
         color: $Moderate-cyan-200;
       }
     }
+
+    &--active {
+      border: 2px solid;
+      border-color: $Moderate-cyan;
+
+      .modal-card {
+        &__label,
+        &__title {
+          font-weight: 700;
+        }
+
+        &__footer {
+          display: block;
+          border-top: 1px solid $light-gray-150;
+        }
+      }
+    }
+
+    .footer-form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 25px 30px;
+
+      &__value {
+        margin-left: auto;
+        width: 100px;
+      }
+    }
   }
 
   .big-text {
@@ -116,7 +159,7 @@
     }
 
     &-card {
-      padding: 30px;
+      padding: 0px;
 
       &__body {
         display: grid;
@@ -126,6 +169,7 @@
           /
           auto 1fr auto;
         gap: 20px;
+        padding: 30px;
       }
 
       &#no-reward & {
@@ -145,7 +189,6 @@
         align-self: center;
         input {
           margin: 0;
-          border: 0;
         }
       }
 
