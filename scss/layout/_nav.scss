@@ -1,5 +1,3 @@
-//@use '../abstracts/misc' as *;
-
 .nav {
   position: relative;
   padding-top: 30px;
@@ -35,6 +33,7 @@
     width: calc(100% - 50px);
     top: 90px;
     left: 0;
+    z-index: 2;
 
     border-radius: 10px;
 
@@ -51,6 +50,10 @@
     color: $Black;
     line-height: 1.1;
     border-bottom: 1px solid mix($Black, white, 10%);
+
+    &:hover {
+      font-weight: 700;
+    }
   }
 }
 
@@ -62,8 +65,9 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 300px;
+      height: 100vh;
       background-color: rgba($color: #000000, $alpha: 0.5);
+      z-index: 2;
     }
   }
 
