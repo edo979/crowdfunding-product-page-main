@@ -74,3 +74,45 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.footer-form {
+  &__value {
+    position: relative;
+
+    &::before {
+      content: '$';
+      position: absolute;
+      left: 20px;
+      top: 14px;
+      color: $light-gray-200;
+    }
+    input {
+      width: 100px;
+      border: 1px solid $light-gray-150;
+      line-height: 1;
+      padding: 15px 30px;
+      padding-right: 15px;
+      border-radius: 30px;
+      text-align: left;
+      font-weight: 700;
+      -moz-appearance: textfield;
+
+      &:focus,
+      &:active {
+        outline: 1px solid $Moderate-cyan;
+      }
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 17px 20px;
+    line-height: 1;
+    font-family: 'Commissioner', sans-serif;
+  }
+}

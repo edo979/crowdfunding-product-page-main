@@ -234,6 +234,42 @@ body {
   background-size: cover;
 }
 
+.footer-form__value {
+  position: relative;
+}
+.footer-form__value::before {
+  content: "$";
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  color: #bfbfbf;
+}
+.footer-form__value input {
+  width: 100px;
+  border: 1px solid #dedede;
+  line-height: 1;
+  padding: 15px 30px;
+  padding-right: 15px;
+  border-radius: 30px;
+  text-align: left;
+  font-weight: 700;
+  -moz-appearance: textfield;
+}
+.footer-form__value input:focus, .footer-form__value input:active {
+  outline: 1px solid #3cb4ac;
+}
+.footer-form__value input::-webkit-outer-spin-button,
+.footer-form__value input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.footer-form__button {
+  border: none;
+  padding: 17px 20px;
+  line-height: 1;
+  font-family: "Commissioner", sans-serif;
+}
+
 .nav {
   position: relative;
   padding-top: 30px;
@@ -658,9 +694,13 @@ body {
   align-items: center;
   margin: 25px 30px;
 }
+.modal-card .footer-form__label {
+  color: #7a7a7a;
+  font-weight: 500;
+}
 .modal-card .footer-form__value {
   margin-left: auto;
-  width: 100px;
+  margin-right: 20px;
 }
 .modal .big-text {
   font-size: 1.15rem;
