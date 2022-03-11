@@ -6,7 +6,10 @@ const navTogglerBtn = document.getElementById('nav-toggler'),
   closeModalBtn = document.getElementById('modal-close'),
   radioBtns = document.querySelectorAll('input[name=pledge]'),
   modalCardEls = document.querySelectorAll('.modal-card'),
-  finishBtn = document.getElementById('finish-btn')
+  finishBtn = document.getElementById('finish-btn'),
+  totalBackedEl = document.getElementById('total-backed'),
+  totalBackersEl = document.getElementById('total-backers'),
+  progressBarEl = document.getElementById('progress-bar')
 
 // Event listeners
 
@@ -33,6 +36,9 @@ modalEl.addEventListener('click', (e) => {
 
   // Activate success-modal
   if (e.target.classList.contains('footer-form__button')) {
+    const inputValue = e.target.parentElement.querySelector('input').value
+
+    updateData(parseInt(inputValue))
     modalEl.style.display = 'none'
     modalSuccessEl.style.display = 'grid'
   }
@@ -42,3 +48,24 @@ finishBtn.addEventListener(
   'click',
   (e) => (modalSuccessEl.style.display = 'none')
 )
+
+// Calculate and update data
+function updateData(inputData) {
+  const totalBacked = parseInt(totalBackedEl.innerText.replace(/\D/g, '')),
+    newTotalBacked = totalBacked + inputData,
+    totalBackers = parseInt(totalBackersEl.innerText.replace(/\D/g, '')),
+    newTotalBackers = totalBackers + 1
+  let newProgressBarValue = Math.round((newTotalBacked / 100000) * 100)
+
+  if (newProgressBarValue > 100) {
+    newProgressBarValue = 100
+  }
+
+  totalBackedEl.innerText = numberWithCommas(newTotalBacked)
+  totalBackersEl.innerText = numberWithCommas(newTotalBackers)
+  progressBarEl.style.width = `${newProgressBarValue}%`
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
