@@ -33,6 +33,12 @@ $container-padding: 25px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      svg path {
+        opacity: 1;
+      }
+    }
   }
 
   &__title {

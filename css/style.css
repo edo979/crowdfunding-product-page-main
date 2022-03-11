@@ -627,6 +627,9 @@ body {
   border: none;
   cursor: pointer;
 }
+.modal .btn-close:hover svg path {
+  opacity: 1;
+}
 .modal__title {
   margin: 0 0 35px;
 }
