@@ -1,6 +1,8 @@
 const navTogglerBtn = document.getElementById('nav-toggler'),
   navEl = document.querySelector('.nav'),
   openModalBtn = document.getElementById('open-modal'),
+  reward1Btn = document.getElementById('reward-btn-1'),
+  reward2Btn = document.getElementById('reward-btn-2'),
   modalEl = document.getElementById('modal'),
   modalSuccessEl = document.getElementById('modal-success'),
   closeModalBtn = document.getElementById('modal-close'),
@@ -22,6 +24,20 @@ openModalBtn.addEventListener('click', (e) => {
   modalEl.style.display = 'grid'
 })
 
+reward1Btn.addEventListener('click', (e) => {
+  removeActiveFromModalCard()
+  modalCardEls[1].classList.add('modal-card--active')
+  modalCardEls[1].querySelector('#bamboo').checked = true
+  modalEl.style.display = 'grid'
+})
+
+reward2Btn.addEventListener('click', (e) => {
+  removeActiveFromModalCard()
+  modalCardEls[2].classList.add('modal-card--active')
+  modalCardEls[2].querySelector('#black').checked = true
+  modalEl.style.display = 'grid'
+})
+
 closeModalBtn.addEventListener('click', (e) => (modalEl.style.display = 'none'))
 
 modalEl.addEventListener('click', (e) => {
@@ -29,7 +45,7 @@ modalEl.addEventListener('click', (e) => {
   if (e.target.getAttribute('name') === 'pledge') {
     const modalCardEl = e.target.parentElement.parentElement.parentElement
 
-    modalCardEls.forEach((card) => card.classList.remove('modal-card--active'))
+    removeActiveFromModalCard()
 
     modalCardEl.classList.add('modal-card--active')
   }
@@ -68,4 +84,8 @@ function updateData(inputData) {
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
+function removeActiveFromModalCard() {
+  modalCardEls.forEach((card) => card.classList.remove('modal-card--active'))
 }
