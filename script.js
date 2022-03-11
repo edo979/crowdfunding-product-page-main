@@ -11,7 +11,8 @@ const navTogglerBtn = document.getElementById('nav-toggler'),
   finishBtn = document.getElementById('finish-btn'),
   totalBackedEl = document.getElementById('total-backed'),
   totalBackersEl = document.getElementById('total-backers'),
-  progressBarEl = document.getElementById('progress-bar')
+  progressBarEl = document.getElementById('progress-bar'),
+  bookmarkBtn = document.getElementById('bookmark')
 
 // Event listeners
 
@@ -67,6 +68,10 @@ modalEl.addEventListener('click', (e) => {
     modalEl.style.display = 'none'
     modalSuccessEl.style.display = 'grid'
   }
+})
+
+bookmarkBtn.addEventListener('click', (e) => {
+  bookmarkBtn.classList.toggle('active')
 })
 
 finishBtn.addEventListener(

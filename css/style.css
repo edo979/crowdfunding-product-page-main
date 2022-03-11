@@ -191,10 +191,30 @@ label {
   height: 55px;
   width: 55px;
   padding: 0;
-  background-image: url(../../images/icon-bookmark.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+  margin-right: 115px;
+}
+.btn-rounded::after {
+  content: "Bookmark";
+  position: absolute;
+  right: -115px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px 25px;
+  padding-left: 50px;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  color: #7a7a7a;
+  z-index: -1;
+}
+.btn-rounded.active::after {
+  color: #147b74;
+}
+.btn-rounded.active svg circle {
+  fill: #147b74;
+}
+.btn-rounded.active svg path {
+  fill: white;
 }
 
 .btn-success {
@@ -419,23 +439,6 @@ body {
     justify-content: space-between;
     position: relative;
     z-index: 1;
-  }
-  .header__buttons a + a {
-    position: relative;
-    margin-right: 115px;
-  }
-  .header__buttons a + a::after {
-    content: "Bookmark";
-    position: absolute;
-    right: -115px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px 25px;
-    padding-left: 50px;
-    border-radius: 25px;
-    background-color: #f2f2f2;
-    color: #7a7a7a;
-    z-index: -1;
   }
   .header__title {
     padding: 10px 10px 0;
