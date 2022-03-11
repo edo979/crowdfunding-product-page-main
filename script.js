@@ -52,6 +52,7 @@ modalEl.addEventListener('click', (e) => {
 
   // Activate success-modal
   if (e.target.classList.contains('footer-form__button')) {
+    e.preventDefault()
     const inputValue = e.target.parentElement.querySelector('input').value
 
     updateData(parseInt(inputValue))
