@@ -681,6 +681,10 @@ body {
   top: 0;
   left: 0;
 }
+.modal-card__title:hover {
+  color: #3cb4ac;
+  font-weight: 700;
+}
 .modal-card__header {
   display: inline-block;
   margin-left: 5px;

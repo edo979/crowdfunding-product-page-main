@@ -41,13 +41,21 @@ reward2Btn.addEventListener('click', (e) => {
 closeModalBtn.addEventListener('click', (e) => (modalEl.style.display = 'none'))
 
 modalEl.addEventListener('click', (e) => {
-  // Set active clase
+  // Set active clase when radio button clicked
   if (e.target.getAttribute('name') === 'pledge') {
+    setActiveModalCard(e.target.parentElement.parentElement.parentElement)
+  }
+
+  // Set active class when title clicked
+  if (e.target.classList.contains('modal-card__title')) {
     const modalCardEl = e.target.parentElement.parentElement.parentElement
 
-    removeActiveFromModalCard()
+    if (modalCardEl.classList.contains('modal-card--disabled')) {
+      return
+    }
 
-    modalCardEl.classList.add('modal-card--active')
+    setActiveModalCard(modalCardEl)
+    modalCardEl.querySelector('input[type=radio]').checked = true
   }
 
   // Activate success-modal
@@ -87,6 +95,13 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
+// Misc
 function removeActiveFromModalCard() {
   modalCardEls.forEach((card) => card.classList.remove('modal-card--active'))
+}
+
+function setActiveModalCard(card) {
+  removeActiveFromModalCard()
+
+  card.classList.add('modal-card--active')
 }

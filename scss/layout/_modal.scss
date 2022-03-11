@@ -84,6 +84,13 @@ $container-padding: 25px;
       }
     }
 
+    &__title {
+      &:hover {
+        color: $Moderate-cyan;
+        font-weight: 700;
+      }
+    }
+
     &__header {
       display: inline-block;
       margin-left: 5px;
