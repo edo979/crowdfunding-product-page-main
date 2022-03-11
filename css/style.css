@@ -192,7 +192,6 @@ label {
   width: 55px;
   padding: 0;
   position: relative;
-  margin-right: 115px;
 }
 .btn-rounded::after {
   content: "Bookmark";
@@ -424,6 +423,9 @@ body {
   align-items: stretch;
   justify-content: space-around;
 }
+.header #bookmark::after {
+  display: none;
+}
 .header__title {
   padding: 30px 10px 0;
 }
@@ -439,6 +441,12 @@ body {
     justify-content: space-between;
     position: relative;
     z-index: 1;
+  }
+  .header #bookmark {
+    margin-right: 115px;
+  }
+  .header #bookmark::after {
+    display: block;
   }
   .header__title {
     padding: 10px 10px 0;
